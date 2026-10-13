@@ -1,24 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute, Link } from '@tanstack/react-router';
+import portrait from '@/assets/razi-profile.png.asset.json';
+import { Header, RoleText, ScrollCue, Stats, SkillCards, Services, Marquee, Contact, Footer, pageHead } from '@/components/portfolio';
+export const Route = createFileRoute('/')({head:()=>pageHead('Muhammed Razi KV — Web Designer & Developer','Crafting digital experiences. Explore the web design, development, SEO, and graphic design portfolio of Muhammed Razi KV.'),component:Index});
+function Index(){return <><Header/><main><section className="hero"><div className="hero-center"><div className="eyebrow">CRAFTING DIGITAL EXPERIENCES — SINCE 2026</div><div className="hero-name"><h1><span>MOHD</span><span>RAZI</span></h1><img className="hero-portrait" src={portrait.url} alt="Muhammed Razi KV" fetchPriority="high"/></div><div className="hero-star" aria-hidden="true">✦</div><div className="hero-intro">I'm <strong>MUHAMMED RAZI KV</strong> — <RoleText/></div></div><ScrollCue/></section><section className="about-band" id="about"><div className="container"><div className="section-label"><span>02 — ABOUT</span><Link to="/about">FULL PROFILE ↗</Link></div><div className="about-grid"><div className="about-copy"><h2 className="section-title">WHO<br/><span className="outline">AM I</span><em>.</em></h2><p>I'm <strong>Muhammed Razi KV</strong> — a Web Designer &amp; Developer from Malappuram, Kerala. I build fast, visually sharp digital experiences that help brands grow.</p><p>Proficient in React, Next.js, SEO, E-Commerce &amp; Graphic Design — delivering on time, every time.</p><Link className="read-more" to="/about">READ MORE <span>―</span></Link></div><div className="about-tools"><Stats/><SkillCards/></div></div></div></section><Services/><Marquee/><Contact/></main><Footer/></>}
