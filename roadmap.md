@@ -1,0 +1,3 @@
+- [ ] Recreate the reference home page, portrait, typography, and animations.
+- [ ] Recreate the public profile page and menu navigation.
+- [ ] Verify desktop, mobile, and contact interactions.
