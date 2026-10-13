@@ -1,3 +1,3 @@
-- [ ] Recreate the reference home page, portrait, typography, and animations.
-- [ ] Recreate the public profile page and menu navigation.
-- [ ] Verify desktop, mobile, and contact interactions.
+- [x] Recreate the reference home page, portrait, typography, and animations.
+- [x] Recreate the public profile page and menu navigation.
+- [x] Verify desktop, mobile, and contact interactions; contact prepares an email rather than sending through the original site's private services.
